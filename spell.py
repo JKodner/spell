@@ -2,8 +2,9 @@ def find(word, rat=0.8, let=0.75):
 	"""This function returns words similar in spelling to the inputted 'word' parameter.
 
 	The 'rat' parameter specifies what Levenshtein word similarity ratio the two words'
-	similarity have to be greater than or equal to. The 'let' parameter inputs a
-	percentage in decimal form of how many similar letters are shared."""
+	similarity have to be greater than or equal to (defaults to 0.8). The 'let' parameter 
+	inputs a percentage in decimal form of how many similar letters are shared (defaults to
+	0.75 which is 75%)."""
 
 	from Levenshtein import ratio
 	from math import floor
@@ -27,3 +28,5 @@ def find(word, rat=0.8, let=0.75):
 	for i in sim:
 		result.append(i[1])
 	return result
+
+def find_lst(word, lst, rat=0.8, let=0.75)
